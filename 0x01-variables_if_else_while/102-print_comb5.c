@@ -9,7 +9,7 @@
 int main(void)
 {
 int i, j;
-for (i = 0; i < 100; i++)
+for (i = 0; i < 99; i++)
 {
 for (j = i; j < 100; j++)
 {
@@ -17,6 +17,10 @@ int d1 = i / 10;
 int d2 = i % 10;
 int d3 = j / 10;
 int d4 = j % 10;
+if (d1 == d3 && d2 == d4)
+{
+continue;
+}
 putchar('0' + d1);
 putchar('0' + d2);
 putchar(' ');
