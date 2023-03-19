@@ -26,7 +26,7 @@ putchar('0' + d2);
 putchar(' ');
 putchar('0' + d3);
 putchar('0' + d4);
-if (i != 99 || j != 99)
+if (i != 98 && j != 99)
 {
 putchar(',');
 putchar(' ');
