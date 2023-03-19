@@ -2,14 +2,14 @@
 #include <stdio.h>
 #include <time.h>
 /**
- * * main - Entry point of the program
- * *
- * * Return: Always 0
- * */
+* main - Entry point of the program
+*
+* Return: Always 0
+*/
 int main(void)
 {
 int i, j;
-for (i = 0; i < 99; i++)
+for (i = 0; i < 100; i++)
 {
 for (j = i; j < 100; j++)
 {
