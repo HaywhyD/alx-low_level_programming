@@ -2,7 +2,9 @@
 #include <stdio.h>
 #include "main.h"
 /**
-* _islower -prints lowercase characters
+* _islower - prints lowercase characters
+*
+* c - integer parameter
 *
 * Return: Always 0 or 1
 */
