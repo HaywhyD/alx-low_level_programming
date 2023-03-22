@@ -4,7 +4,7 @@
 /**
 * _islower - prints lowercase characters
 *
-* c - integer parameter
+* @c: integer parameter
 *
 * Return: Always 0 or 1
 */
