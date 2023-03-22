@@ -10,18 +10,12 @@
 */
 int _isalpha(int c)
 {
-for (int i = 'a'; i <= 'z'; i++)
-{
-if (i == c)
+if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
 {
 return (1);
 }
-}
-for (int d = 'A'; d <= 'Z'; d++)
-{
-if (d == c)
+else
 {
 return (0);
-}
 }
 }
