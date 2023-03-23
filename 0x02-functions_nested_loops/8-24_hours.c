@@ -8,13 +8,14 @@
 */
 void jack_bauer(void)
 {
-for (int i = 0; i <= 2; i++)
+int i,d,f,j;
+for (i = 0; i <= 2; i++)
 {
-for (int d = 0; d <= 9; d++)
+for (d = 0; d <= 9; d++)
 {
-for (int f = 0; f <= 5; f++)
+for (f = 0; f <= 5; f++)
 {
-for (int j = 0; j < 10; j++)
+for (j = 0; j < 10; j++)
 {
 if ((i == 2) && (d >= 4 && d <= 9))
 {
