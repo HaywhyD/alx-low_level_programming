@@ -51,7 +51,7 @@ _putchar('\n');
 else
 {
 int _abs = _abs64(n);
-for (i = abs; i >= 0; i--)
+for (i = _abs; i >= 0; i--)
 {
 if (i != 0)
 {
