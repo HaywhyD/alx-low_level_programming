@@ -4,8 +4,6 @@
 /**
 * print_to_98 - prints lowercase characters
 *
-* print_number - prints i number
-*
 * @n: integer parameter
 */
 void print_to_98(int n)
@@ -32,6 +30,10 @@ putchar(' ');
 print_number(98);
 putchar('\n');
 }
+/**
+* print_number - prints i number
+* @n: integer parameter
+*/
 void print_number(int n)
 {
 if (n < 0)
