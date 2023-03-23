@@ -32,7 +32,7 @@ putchar(' ');
 print_number(98);
 putchar('\n');
 }
-print_number(int n)
+void print_number(int n)
 {
 if (n < 0)
 {
