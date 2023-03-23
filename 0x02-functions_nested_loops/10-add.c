@@ -7,7 +7,7 @@
 * @int: integer parameter
 * Return: Always 0 or 1
 */
-void add(int i, int j)
+int add(int i, int j)
 {
 int sum = i + j;
 return (sum);
