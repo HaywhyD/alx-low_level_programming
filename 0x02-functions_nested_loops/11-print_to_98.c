@@ -4,92 +4,44 @@
 /**
 * print_to_98 - prints lowercase characters
 *
+* print_number: prints the number
+*
 * @n: integer parameter
 */
 void print_to_98(int n)
 {
 int i;
-if (n <= 98 && n >= 0)
+if (n <= 98)
 {
-for (i = n; i <= 98; i++)
+for (i = n; i < 98; i++)
 {
-if (i < 10)
-{
-_putchar(i % 10 + '0');
+print_number(i);
+putchar(',');
+putchar(' ');
+}
 }
 else
 {
-_putchar(i / 10 + '0');
-_putchar(i % 10 + '0');
-}
-if (i != 98)
+for (i = n; i > 98; i--)
 {
-_putchar(',');
-_putchar(' ');
+print_number(i);
+putchar(',');
+putchar(' ');
 }
 }
-_putchar('\n');
+void print_number(98);
+putchar('\n');
 }
-else if (n > 98)
+void print_number(int n)
 {
-for (i = n; i >= 98; i--)
+if (n < 0)
 {
-if (i >= 100)
+putchar('-');
+n *= -1;
+}
+if (n / 10 != 0)
 {
-_putchar(i / 100 + '0');
+print_number(n / 10);
 }
-_putchar(i / 10 % 10 + '0');
-_putchar(i % 10 + '0');
-if (i != 98)
-{
-_putchar(',');
-_putchar(' ');
-}
-}
-_putchar('\n');
-}
-else
-{
-int _abss = _abs64(n);
-for (i = _abss; i >= 0; i--)
-{
-if (i != 0)
-{
-_putchar('-');
-}
-if (i < 10)
-{
-_putchar(i % 10 + '0');
-}
-else
-{
-if (i >= 100)
-{
-_putchar(i / 100 + '0');
-}
-_putchar(i / 10 % 10 + '0');
-_putchar(i % 10 + '0');
-}
-_putchar(',');
-_putchar(' ');
-}
-for (i = 1; i <= 98; i++)
-{
-if (i < 10)
-{
-_putchar(i % 10 + '0');
-}
-else
-{
-_putchar(i / 10 + '0');
-_putchar(i % 10 + '0');
-}
-if (i != 98)
-{
-_putchar(',');
-_putchar(' ');
-}
-}
-_putchar('\n');
-}
+putchar((n % 10) + '0');
 }
