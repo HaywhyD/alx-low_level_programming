@@ -19,7 +19,7 @@ _putchar(product + '0');
 }
 else if (j == 0)
 {
-_putchar(product % 10 + '0');
+_putchar(product + '0');
 }
 else if (i == 0)
 {
