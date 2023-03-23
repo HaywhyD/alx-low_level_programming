@@ -50,7 +50,7 @@ _putchar('\n');
 }
 else
 {
-int _abss = _abs(n);
+int _abss = _abs64(n);
 for (i = _abss; i >= 0; i--)
 {
 if (i != 0)
