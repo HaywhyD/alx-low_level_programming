@@ -4,7 +4,7 @@
 /**
 * print_to_98 - prints lowercase characters
 *
-* print_number - prints the number
+* print_number - prints i number
 *
 * @n: integer parameter
 */
@@ -32,7 +32,7 @@ putchar(' ');
 print_number(98);
 putchar('\n');
 }
-void print_number(int n)
+print_number(int n)
 {
 if (n < 0)
 {
