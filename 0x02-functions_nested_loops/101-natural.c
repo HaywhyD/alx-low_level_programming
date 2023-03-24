@@ -1,11 +1,11 @@
 #include <stdio.h>
 #include "main.h"
 /**
-* print_sum_of_multiples - prints the sum of all the multiples of 3 or 5 below 1024
+* main - prints the sum of all the multiples of 3 or 5 below 1024
 *
 * Return: void
 */
-int main()
+int main(void)
 {
 int sum;
 int i, j, n;
@@ -39,5 +39,5 @@ digit = (sum / divisor) % 10;
 putchar(digit + '0');
 }
 putchar('\n');
-return 0;
+return (0);
 }
