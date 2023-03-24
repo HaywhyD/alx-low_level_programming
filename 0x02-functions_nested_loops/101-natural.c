@@ -8,7 +8,8 @@
 void print_sum_of_multiples(void)
 {
 int sum = 0;
-or (int i = 0; i < 1024; i++)
+int i;
+for (i = 0; i < 1024; i++)
 {
 if (i % 3 == 0 || i % 5 == 0)
 {
@@ -22,7 +23,8 @@ while (temp_sum > 0)
 digits++;
 temp_sum /= 10;
 }
-for (int i = digits; i > 0; i--)
+int i;
+for (i = digits; i > 0; i--)
 {
 int digit = sum / power_of_10(i - 1) % 10;
 _putchar(digit + '0');
@@ -38,7 +40,8 @@ _putchar('\n');
 int power_of_10(int exponent)
 {
 int result = 1;
-for (int i = 0; i < exponent; i++)
+int i;
+for (i = 0; i < exponent; i++)
 {
 result *= 10;
 }
