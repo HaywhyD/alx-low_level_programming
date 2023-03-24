@@ -9,26 +9,29 @@
 int main(void)
 {
 int i;
-int c;
-int a = 1, b = 2;
+int num1 = 1;
+int num2 = 2;
+int temp;
+int count = 2;
 putchar('1');
 putchar(',');
 putchar(' ');
 putchar('2');
 putchar(',');
 putchar(' ');
-for (i = 2; i < 50; i++)
+for (i = 3; i <= 50; i++)
 {
-c = a + b;
-printf("%d", c);
-if (i < 49)
+temp = num1 + num2;
+num1 = num2;
+num2 = temp;
+count++;
+printf("%d", temp);
+if (count != 50)
 {
 putchar(',');
 putchar(' ');
 }
-a = b;
-b = c;
-}
+}												    }
 putchar('\n');
-return 0;
+return (0);
 }
