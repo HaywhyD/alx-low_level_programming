@@ -5,11 +5,10 @@
 *
 * Return: void
 */
-void print_sum_of_multiples(void)
+int main()
 {
 int sum = 0;
-int i;
-for (i = 0; i < 1024; i++)
+for (int i = 1; i < 1024; i++)
 {
 if (i % 3 == 0 || i % 5 == 0)
 {
@@ -17,43 +16,24 @@ sum += i;
 }
 }
 int digits = 0;
-int temp_sum = sum;
-while (temp_sum > 0)
+for (int n = sum; n > 0; n /= 10)
 {
 digits++;
-temp_sum /= 10;
 }
-int i;
-for (i = digits; i > 0; i--)
+if (sum == 0)
 {
-int digit = sum / power_of_10(i - 1) % 10;
-_putchar(digit + '0');
+putchar('0');
 }
-_putchar('\n');
-}
-/**
-* power_of_10 - calculates the power of 10 for a given exponent
-* @exponent: The exponent of the power of 10 to calculate
-*
-* Return: The power of 10 for the given exponent
-*/
-int power_of_10(int exponent)
+for (int i = digits - 1; i >= 0; i--)
 {
-int result = 1;
-int i;
-for (i = 0; i < exponent; i++)
+int divisor = 1;
+for (int j = 0; j < i; j++)
 {
-result *= 10;
+divisor *= 10;
 }
-return result;
+int digit = (sum / divisor) % 10;
+putchar(digit + '0');
 }
-/**
-* main - Entry point of the program
-*
-* Return: Always 0 (Success)
-*/
-int main(void)
-{
-print_sum_of_multiples();
-return (0);
+putchar('\n');
+return 0;
 }
