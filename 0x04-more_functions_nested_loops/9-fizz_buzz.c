@@ -1,6 +1,7 @@
 #include "main.h"
 #include <stdio.h>
-/** main - print fizz-buss
+/**
+* main - print fizz-buss
 * Return: Always 0 or 1
 */
 int main(void)
@@ -29,5 +30,5 @@ if (i != 100)
 printf(" ");
 }
 }
-return (1);
+return (0);
 }
