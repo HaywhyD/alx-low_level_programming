@@ -10,21 +10,18 @@ int main(void)
 {
 int i;
 int n;
+int a, b;
+int c;
 n = 50;
-int fib[n];
-fib[0] = 1;
-fib[1] = 2;
+a = 1,
+b = 2;
+printf("%d, %d", a, b);
 for (i = 2; i < n; i++)
 {
-fib[i] = fib[i - 1] + fib[i - 2];
-}
-for (i = 0; i < n; i++)
-{
-printf("%d", fib[i]);
-if (i < n - 1)
-{
-printf(", ");
-}
+c = a + b;
+printf(", %d", c);
+a = b;
+b = c;
 }
 printf("\n");
 return (0);
