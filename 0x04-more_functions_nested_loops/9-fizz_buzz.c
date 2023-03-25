@@ -3,7 +3,7 @@
 /** main - print fizz-buss
 * Return: Always 0 or 1
 */
-int main(void)
+void main(void)
 {
 int i;
 for (i = 1; i <= 100; i++)
