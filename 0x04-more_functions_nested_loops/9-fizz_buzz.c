@@ -29,5 +29,5 @@ if (i != 100)
 printf(" ");
 }
 }
-return (0);
+return (1);
 }
