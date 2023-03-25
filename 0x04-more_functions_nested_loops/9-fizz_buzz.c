@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /** main - print fizz-buss
 * Return: Always 0 or 1
 */
