@@ -9,29 +9,23 @@
 int main(void)
 {
 int i;
-int num1 = 1;
-int num2 = 2;
-int temp;
-int count = 2;
-putchar('1');
-putchar(',');
-putchar(' ');
-putchar('2');
-putchar(',');
-putchar(' ');
-for (i = 3; i <= 50; i++)
+int n;
+n = 50;
+int fib[n];
+fib[0] = 1;
+fib[1] = 2;
+for (i = 2; i < n; i++)
 {
-temp = num1 + num2;
-num1 = num2;
-num2 = temp;
-count++;
-printf("%d", temp);
-if (count != 50)
+fib[i] = fib[i - 1] + fib[i - 2];
+}
+for (i = 0; i < n; i++)
 {
-putchar(',');
-putchar(' ');
+printf("%d", fib[i]);
+if (i < n - 1)
+{
+printf(", ");
 }
 }
-putchar('\n');
+printf("\n");
 return (0);
 }
