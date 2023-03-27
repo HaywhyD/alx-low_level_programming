@@ -8,5 +8,10 @@
 */
 void _puts(char *str)
 {
-printf("%p\n", *str);
+while (*str != '\0')
+{
+putchar(*str);
+str++;
+}
+putchar('\n');
 }
