@@ -2,50 +2,37 @@
 #include <stdlib.h>
 #include <time.h>
 #include "main.h"
+#define PASSWORD_LENGTH 10
+
 /**
-* main - Generates random passwords for 101-crackme.
+* generate_random_char - generates a random character between '!' and '~' in the ASCII table
 *
-* Return: Always 0.
+* Return: a random character between '!' and '~'
+*/
+char generate_random_char(void)
+{
+/** rand() % 94 generates a random integer between 0 and 93
+*  Adding 33 shifts the range to '!' to '~'
+*/
+return (char)(rand() % 94 + 33);
+}
+
+/**
+* main - entry point for the program
+*
+* Return: always 0
 */
 int main(void)
 {
-int i, sum, diff, n;
-char c;
-srand(time(NULL));
-sum = 0;
-i = 0;
-while (sum < 2772 - 122)
-{
-n = rand() % 62;
-if (n < 26)
-{
-c = 'A' + n;
+char password[PASSWORD_LENGTH + 1];
+/** Initializes the random number generator with the current time */
+srand((unsigned int)time(NULL));
+/** Generates a random password of length PASSWORD_LENGTH */
+for (int i = 0; i < PASSWORD_LENGTH; i++) {
+password[i] = generate_random_char();
 }
-else if (n < 52)
-{
-c = 'a' + n - 26;
-}
-else
-{
-c = '0' + n - 52;
-}
-putchar(c);
-sum += c;
-i++;
-}
-diff = 2772 - sum;
-if (diff > 0 && diff < 26)
-{
-putchar('A' + diff - 1);
-}
-else if (diff >= 26 && diff < 52)
-{
-putchar('a' + diff - 26 - 1);
-}
-else if (diff >= 52 && diff < 62)
-{
-putchar('0' + diff - 52 - 1);
-}
-printf("\n");
+password[PASSWORD_LENGTH] = '\0';
+/** Prints the generated password */
+printf("Generated password: %s\n", password);
 return (0);
 }
