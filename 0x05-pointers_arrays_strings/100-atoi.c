@@ -23,7 +23,7 @@ num = num * 10 + sign * (s[i] - '0');
 if (num != 0 && !(s[i] >= '0' && s[i] <= '9'))
 {
 break;
-
+}
 i++;
 }
 return (num);
