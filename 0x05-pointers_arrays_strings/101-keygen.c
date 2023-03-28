@@ -24,11 +24,12 @@ return (char)(rand() % 94 + 33);
 */
 int main(void)
 {
+int i;
 char password[PASSWORD_LENGTH + 1];
 /** Initializes the random number generator with the current time */
 srand((unsigned int)time(NULL));
 /** Generates a random password of length PASSWORD_LENGTH */
-for (int i = 0; i < PASSWORD_LENGTH; i++) {
+for (i = 0; i < PASSWORD_LENGTH; i++) {
 password[i] = generate_random_char();
 }
 password[PASSWORD_LENGTH] = '\0';
