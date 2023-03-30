@@ -9,17 +9,16 @@
 */
 char *_strncat(char *dest, char *src, int n)
 {
-size_t dest_len = 0, i = 0;
+int dest_len = 0, i;
 while (dest[dest_len] != '\0')
 {
 dest_len++;
 }
-while (src[i] != '\0' && i < n)
+for (i = 0; i < n && src[i] != '\0'; i++)
 {
-dest[dest_len] = src[i];
-dest_len++;
-i++;
+dest[dest_len + i] = src[i];
 }
-dest[dest_len] = '\0';
+/* Add the null terminator to the end of dest */
+dest[dest_len + i] = '\0';
 return (dest);
 }
