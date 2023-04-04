@@ -15,5 +15,17 @@ for (i = 0; i < size; i++)
 sum1 += *(a + i * size + i);
 sum2 += *(a + i * size + (size - i - 1));
 }
-printf("%d, %d\n", sum1, sum2);
+if (sum1 > 9)
+{
+_putchar(sum1 / 10 + '0');
+}
+_putchar(sum1 % 10 + '0');
+_putchar(',');
+_putchar(' ');
+if (sum2 > 9)
+{
+_putchar(sum2 / 10 + '0');
+}
+_ putchar(sum2 % 10 + '0');
+_putchar('\n');
 }
