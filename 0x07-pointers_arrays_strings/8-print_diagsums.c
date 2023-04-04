@@ -13,19 +13,8 @@ int i, sum1 = 0, sum2 = 0;
 for (i = 0; i < size; i++)
 {
 sum1 += *(a + i * size + i);
-sum2 += *(a + i * size + (size - i - 1));
+sum2 += *(a + i * size + size - 1 - i);
 }
-if (sum1 > 9)
-{
-_putchar(sum1 / 10 + '0');
-}
-_putchar(sum1 % 10 + '0');
-_putchar(',');
-_putchar(' ');
-if (sum2 > 9)
-{
-_putchar(sum2 / 10 + '0');
-}
-_putchar(sum2 % 10 + '0');
-_putchar('\n');
+printf("Sum of diagonal1 is %d\n", sum1);
+printf("Sum of diagonal2 is %d\n", sum2);
 }
