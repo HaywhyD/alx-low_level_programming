@@ -26,6 +26,6 @@ if (sum2 > 9)
 {
 _putchar(sum2 / 10 + '0');
 }
-_ putchar(sum2 % 10 + '0');
+_putchar(sum2 % 10 + '0');
 _putchar('\n');
 }
