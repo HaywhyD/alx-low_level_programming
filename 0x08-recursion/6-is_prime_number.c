@@ -1,5 +1,4 @@
 #include "main.h"
-#include <math.h>
 /**
 * is_prime_number - Checks if an input integer is a prime number or not
 * @n: The number to check
@@ -10,11 +9,11 @@
 int is_prime_number(int n)
 {
 /* edge case: n is less than 2, which is not a prime number */
-if (n < 2)
+if (n <= 1)
 {
 return (0);
-}   
-return (check_prime(n, n - 1)); /* call helper function to check if n is prime */
+}
+return (check_prime(n, n - 1));
 }
 
 /**
@@ -33,9 +32,12 @@ if (n % i == 0 && i > 0)
 return (0);
 }
 /* base case: i is greater than the square root of n, which means n is prime */
-if (i == 1)
+else if (i == 1)
 {
 return (1);
 }
+else
+{
 return (check_prime(n, i - 1));
+}
 }
