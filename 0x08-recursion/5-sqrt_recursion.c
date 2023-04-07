@@ -1,4 +1,4 @@
-#include "main"
+#include "main.h"
 /**
 * _sqrt_recursion - Returns the natural square root of a number
 * @n: The number to find the square root of
