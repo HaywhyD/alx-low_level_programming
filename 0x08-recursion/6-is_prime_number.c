@@ -14,7 +14,7 @@ if (n < 2)
 {
 return (0);
 }   
-return (check_prime(n, 2)); /* call helper function to check if n is prime */
+return (check_prime(n, n - 1)); /* call helper function to check if n is prime */
 }
 
 /**
@@ -28,17 +28,14 @@ return (check_prime(n, 2)); /* call helper function to check if n is prime */
 int check_prime(int n, int i)
 {
 /* base case: n is divisible by i, which means it's not prime */
-if (n % i == 0)
+if (n % i == 0 && i > 0)
 {
 return (0);
 }
 /* base case: i is greater than the square root of n, which means n is prime */
-else if (i > sqrt(n))
+if (i == 1)
 {
 return (1);
 }
-else /* recursive case: check if n is divisible by the next divisor */
-{
-return (check_prime(n, i + 1));
-}
+return (check_prime(n, i - 1));
 }
