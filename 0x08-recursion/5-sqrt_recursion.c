@@ -12,15 +12,7 @@ if (n < 0) /* error check: n should be non-negative */
 {
 return (-1);
 }
-else if (n == 0 || n == 1) /* base case: square root of 0 or 1 is n itself */
-{
-return (n);
-}
-else /* recursive case: calculate square root of n */
-{
-int root = _sqrt_helper(n, n / 2);
-return (root);
-}
+return (_sqrt_helper(n, 0));
 }
 
 /**
@@ -37,12 +29,9 @@ if (guess * guess == n) /* base case: square root of n is found */
 {
 return (guess);
 }
-else if (guess == 0) /* base case: square root of n is not a whole number */
+if (guess * guess > n) /* base case: square root of n is not a whole number */
 {
 return (-1);
 }
-else /* recursive case: refine the guess for the square root of n */
-{
-return (_sqrt_helper(n, (n / guess + guess) / 2));
-}
+return (_sqrt_helper(n, guess + 1));
 }
