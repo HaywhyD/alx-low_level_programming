@@ -1,43 +1,57 @@
 #include "main.h"
+
 /**
-* is_prime_number - Checks if an input integer is a prime number or not
-* @n: The number to check
-*
-* Return: 1 if n is prime, 0 otherwise
-*/
+ * is_prime_number - determine if a number is a prime number
+ * @n: int number
+ * Return: 1 if prime, 0 otherwise
+ */
 
 int is_prime_number(int n)
 {
-/* edge case: n is less than 2, which is not a prime number */
-if (n <= 1)
-{
-return (0);
-}
-return (check_prime(n, n - 1));
+	int prime_number(int divider, int n);
+
+	int divider = 2;
+
+	if (n < 2)
+	{
+		return (0);
+	}
+	if (n % n == 0 || n % 1 == 0)
+	{
+		if (prime_number(divider, n) != 0)
+		{
+			return (1);
+		}
+		else
+		{
+			return (0);
+		}
+	}
 }
 
 /**
-* check_prime - A helper function to check if a number is prime or not
-* @n: The number to check
-* @i: The divisor to check
-*
-* Return: 1 if n is prime, 0 otherwise
-*/
+ * prime_number - helper function, recursive steps taken
+ * @n: number given to original function is_prime_number
+ * @divider: incrementer divisor
+ * Return: 0 if not prime, 1 if prime
+ */
 
-int check_prime(int n, int i)
+int prime_number(int divider, int n)
 {
-/* base case: n is divisible by i, which means it's not prime */
-if (n % i == 0 && i > 0)
-{
-return (0);
-}
-/* base case: i is greater than the square root of n, which means n is prime */
-else if (i == 1)
-{
-return (1);
-}
-else
-{
-return (check_prime(n, i - 1));
-}
+	if (divider < n)
+	{
+		if (n % divider == 0)
+		{
+			return (0);
+		}
+		else
+		{
+			++divider;
+			return (prime_number(divider, n));
+		}
+	}
+	else
+	{
+		return (1);
+	}
 }
