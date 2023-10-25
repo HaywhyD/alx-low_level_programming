@@ -6,11 +6,11 @@
 */
 void _puts_recursion(char *s)
 {
-if (*s == '\0') // Base case: if we reach the end of the string
+if (*s == '\0')
 {
-_putchar('\n'); // Print a new line
-return; // Return to the previous function call
+_putchar('\n');
+return;
 }
-_putchar(*s); // Print the current character
-_puts_recursion(s + 1); // Recursively call _puts_recursion with the next character
+_putchar(*s);
+_puts_recursion(s + 1);
 }
