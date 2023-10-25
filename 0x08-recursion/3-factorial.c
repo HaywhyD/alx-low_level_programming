@@ -7,10 +7,10 @@
 */
 int factorial(int n)
 {
-if (n < 0) // Error case: if n is negative
+if (n < 0)
 	return (-1);
-else if (n == 0) // Base case: if n is 0, factorial is 1
+else if (n == 0)
 	return (1);
 else
-	return (n * factorial(n - 1)); // Recursively calculate the factorial
+	return (n * factorial(n - 1));
 }
