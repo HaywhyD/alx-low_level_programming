@@ -40,6 +40,6 @@ return (check_palindrome(s, start + 1, end - 1));
 int _strlen(char *s)
 {
 if (*s == '\0')
-	return (0);       
+	return (0);
 return (1 + _strlen(s + 1));
 }
